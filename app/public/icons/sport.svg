@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="g-sport" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38b000"/>
+      <stop offset="100%" stop-color="#008000"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="24" fill="url(#g-sport)"/>
+  
+      <circle cx="100" cy="100" r="46" fill="#fff"/>
+      <g stroke="#008000" stroke-width="5" fill="none">
+        <path d="M100 54v92"/>
+        <path d="M54 100h92"/>
+        <path d="M68 68a45 45 0 0 0 64 64"/>
+        <path d="M132 68a45 45 0 0 1-64 64"/>
+      </g>
+</svg>

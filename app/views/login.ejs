@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connexion - <%= site.nom %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="auth-box">
+    <div class="lang-switch">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="ar">AR</button>
+    </div>
+    <h1><%= site.nom %></h1>
+    <p style="text-align:center; color:#a0a4b8;" data-i18n="login_subtitle">Connectez-vous avant de jouer</p>
+
+    <% if (googleEnabled) { %>
+      <a href="/auth/google" class="google-btn" data-i18n="login_google">Se connecter avec Google</a>
+      <p style="text-align:center; margin:14px 0; color:#666;" data-i18n="or_separator">— ou —</p>
+    <% } %>
+
+    <form method="POST" action="/login">
+      <label data-i18n="label_email">Email</label>
+      <input type="email" name="email" required>
+      <label data-i18n="label_password">Mot de passe</label>
+      <input type="password" name="password" required>
+      <button class="submit" type="submit" data-i18n="login_submit">Se connecter</button>
+    </form>
+
+    <% if (error) { %><p class="error-msg"><%= error %></p><% } %>
+
+    <p class="switch-link"><span data-i18n="no_account">Pas encore de compte ?</span> <a href="/register" data-i18n="create_account">Créer un compte</a></p>
+    <p class="switch-link"><a href="/">&larr; <span data-i18n="back_home">Retour à l'accueil</span></a></p>
+  </div>
+  <script src="/js/i18n.js"></script>
+</body>
+</html>

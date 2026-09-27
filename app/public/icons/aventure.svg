@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="g-aventure" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4cc9f0"/>
+      <stop offset="100%" stop-color="#4361ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="24" fill="url(#g-aventure)"/>
+  
+      <circle cx="100" cy="100" r="48" fill="none" stroke="#fff" stroke-width="8"/>
+      <polygon points="100,64 112,100 100,136 88,100" fill="#fff"/>
+      <circle cx="100" cy="100" r="6" fill="#4361ee"/>
+</svg>

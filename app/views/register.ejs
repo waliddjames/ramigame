@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Créer un compte - <%= site.nom %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="auth-box">
+    <div class="lang-switch">
+      <button type="button" data-lang="en">EN</button>
+      <button type="button" data-lang="ar">AR</button>
+    </div>
+    <h1><%= site.nom %></h1>
+    <p style="text-align:center; color:#a0a4b8;" data-i18n="register_subtitle">Créer un compte pour jouer</p>
+
+    <form method="POST" action="/register">
+      <label data-i18n="label_name">Nom</label>
+      <input type="text" name="nom" required>
+      <label data-i18n="label_email">Email</label>
+      <input type="email" name="email" required>
+      <label data-i18n="label_password">Mot de passe</label>
+      <input type="password" name="password" required minlength="6">
+      <button class="submit" type="submit" data-i18n="register_submit">Créer mon compte</button>
+    </form>
+
+    <% if (error) { %><p class="error-msg"><%= error %></p><% } %>
+
+    <p class="switch-link"><span data-i18n="have_account">Déjà un compte ?</span> <a href="/login" data-i18n="go_login">Se connecter</a></p>
+    <p class="switch-link"><a href="/">&larr; <span data-i18n="back_home">Retour à l'accueil</span></a></p>
+  </div>
+  <script src="/js/i18n.js"></script>
+</body>
+</html>

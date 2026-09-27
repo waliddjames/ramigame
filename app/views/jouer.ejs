@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= jeu.titre %> - <%= site.nom %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-wrap">
+      <button type="button" class="logo" id="logoToggle" aria-expanded="false" aria-controls="logoDropdown">
+        <%= site.nom %> <span class="caret">&#9662;</span>
+      </button>
+      <div class="logo-dropdown" id="logoDropdown">
+        <p data-i18n="welcome_msg">You are welcome To RamiGame</p>
+      </div>
+    </div>
+    <nav>
+      <span><span data-i18n="hello">Bonjour</span>, <%= user.nom || user.email %></span>
+      <a href="/logout" class="btn" data-i18n="logout">Déconnexion</a>
+      <div class="lang-switch">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ar">AR</button>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <a href="/" style="color:#4cc9f0;">&larr; <span data-i18n="back_catalog">Retour au catalogue</span></a>
+    <h1><%= jeu.titre %></h1>
+    <p><span data-i18n="jouer_category">Catégorie :</span> <%= jeu.categorie %></p>
+    <p data-i18n="jouer_desc">
+      Ce catalogue est une démonstration : cliquez ci-dessous pour ouvrir
+      le jeu sur une plateforme externe. Remplacez ce lien par votre propre
+      jeu hébergé (iframe) si vous en avez un.
+    </p>
+    <a class="play-btn" style="display:inline-block; width:auto; padding:12px 24px;"
+       href="<%= jeu.external %>" target="_blank" rel="noopener">
+      <span data-i18n="jouer_launch">Lancer le jeu</span> &rarr;
+    </a>
+  </div>
+  <footer>
+    <span data-i18n="footer_site">Site :</span> <strong><%= site.domaine %></strong><br>
+    <span data-i18n="footer_owner">Propriétaire du site :</span> <strong><%= site.proprietaire %></strong> — <%= site.localisation %>
+  </footer>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
