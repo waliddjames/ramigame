@@ -154,11 +154,27 @@ html[dir="rtl"] .lang-switch {
   overflow-x: auto;
   padding-bottom: 8px;
 }
-.ads-carousel video {
-  width: 320px;
+
+/*.ads-carousel video {*/
+/* // width: 320px;
   border-radius: 10px;
   border: 2px solid var(--accent2);
+}*/
+.ads-carousel > div {
+  width: 107px;
+  flex-shrink: 0;
 }
+.ads-carousel video {
+  width: 107px;
+  border-radius: 8px;
+  border: 2px solid var(--accent2);
+}
+.ads-carousel p {
+  font-size: 11px;
+  margin: 4px 0 0;
+}
+
+
 
 .games-section h2 { color: var(--accent); }
 .games-grid {
