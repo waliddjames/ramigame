@@ -5,16 +5,19 @@ module.exports = [
   {
     id: 1,
     titre: 'RAMIpublicités - Spot 1',
-    video: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
+    video: '/videos/spot1.mp4'  
+ // video: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
   },
   {
     id: 2,
     titre: 'RAMIpublicités - Spot 2',
-    video: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm'
+    video:'/videos/spot2.mp4'  
+//video: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm'
   },
   {
     id: 3,
     titre: 'RAMIpublicités - Spot 3',
-    video: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
+    video:'/videos/spot3.mp4'
+    //video: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'
   }
 ];

@@ -93,9 +93,9 @@ function requireAuth(req, res, next) {
 // ---------- Infos du site ----------
 const SITE_INFO = {
   nom: 'RAMIGame',
-  domaine: 'RamiGame.gr.com',
-  proprietaire: 'Rami Garouachi',
-  localisation: 'Ariana, Tunisie'
+  domaine: 'ramigame.onrender.com',
+  proprietaire: 'Rami Garouachi رامي القرواشي',
+  localisation: 'Cité El Gazella Ariana, Tunisie'
 };
 
 // ---------- Routes ----------
